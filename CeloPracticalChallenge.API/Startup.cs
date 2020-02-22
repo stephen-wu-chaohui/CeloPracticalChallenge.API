@@ -64,8 +64,7 @@ namespace CeloPracticalChallenge.API
             });
 
             services.AddDbContext<CeloPracticalChallengeDBContext>(options =>
-              // options.UseSqlServer(Configuration.GetConnectionString("CeloPracticalChallengeContext"))
-              options.UseInMemoryDatabase("InMemoryAppDb")
+              options.UseSqlServer(Configuration.GetConnectionString("CeloPracticalChallengeContext"))
             );
                     
             services.AddScoped<IRandomUserRepository, RandomUserRepository>();
